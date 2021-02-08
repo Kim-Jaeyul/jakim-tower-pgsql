@@ -2,7 +2,7 @@
 
 ## 3 Tower & 2 pgsql 구성도
 
-![image-20210209084632817](C:\Users\jakim\Desktop\navercloud\pic\image-20210209084632817.png)
+![image-20210209084632817](Chttps://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209084632817.png)
 
 
 
