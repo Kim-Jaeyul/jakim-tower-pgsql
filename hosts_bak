@@ -1,0 +1,13 @@
+
+[tower]
+at1.lab.munshibari.biz ansible_host=192.168.122.11
+
+[database]
+db2.lab.munshibari.biz pgsqlrep_role=master
+
+[database_replica]
+db1.lab.munshibari.biz pgsqlrep_role=replica
+
+[all:vars]
+pg_host='db2.lab.munshibari.biz'
+

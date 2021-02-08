@@ -1,0 +1,71 @@
+---
+- name: Promote secondary HA database to primary
+#  hosts: database
+  hosts: database_replica
+  become: true
+  vars:
+    pg_bash: ""
+  tasks:
+    - name: import postgres role vars
+      import_role:
+        name: postgres
+      vars:
+        postgres_exec_vars_only: true
+
+    - name: determine path for pg_ctl command
+      set_fact:
+        pg_conf_bin_inferred: "{{ pg_initdb_command | dirname }}"
+
+    - name: if Tower postgres role does not provide an SCL prefix
+      set_fact:
+        pg_bash: ""
+      when: pg_bash is not defined
+
+    - name: get the current postgres version
+      import_role:
+        name: pgsql-replication
+        tasks_from: pgsql_version.yml
+      vars:
+        pgsqlrep_bash: "{{ pg_bash }}"
+
+    - name: Check recovery.conf
+      stat:
+        path: "{{ pg_conf_dir }}/recovery.conf"
+      register: recovery_conf
+
+    - name: Exit if secondary is already promoted or not in standby mode
+      fail:
+        msg: Secondary database server is not in standby mode.
+      when: recovery_conf.stat.isreg is not defined
+      ignore_errors: yes
+
+    - name: Promote secondary PostgreSQL server to primary
+      command: "{{ pg_conf_bin_inferred }}/pg_ctl promote -D {{ pg_conf_dir }}"
+      environment:
+        PATH: /opt/rh/rh-postgresql10/root/usr/bin:{{ ansible_env.PATH }}
+        LIBRARY_PATH: /opt/rh/rh-postgresql10/root/usr/lib64
+        JAVACONFDIRS: '/etc/opt/rh/rh-postgresql10/java:/etc/java'
+        LD_LIBRARY_PATH: /opt/rh/rh-postgresql10/root/usr/lib64
+        CPATH: /opt/rh/rh-postgresql10/root/usr/include
+        PKG_CONFIG_PATH: /opt/rh/rh-postgresql10/root/usr/lib64/pkgconfig
+      become_user: postgres
+      ignore_errors: yes
+      when: recovery_conf.stat.isreg is defined
+
+    - name: ensure replica is not in recovery mode
+      command: '{{ pg_bash }} psql -U postgres -t -c "select pg_is_in_recovery();"'
+      environment:
+        PATH: /opt/rh/rh-postgresql10/root/usr/bin:{{ ansible_env.PATH }}
+        LIBRARY_PATH: /opt/rh/rh-postgresql10/root/usr/lib64
+        JAVACONFDIRS: '/etc/opt/rh/rh-postgresql10/java:/etc/java'
+        LD_LIBRARY_PATH: /opt/rh/rh-postgresql10/root/usr/lib64
+        CPATH: /opt/rh/rh-postgresql10/root/usr/include
+        PKG_CONFIG_PATH: /opt/rh/rh-postgresql10/root/usr/lib64/pkgconfig
+      register: recovery_mode
+      changed_when: false
+      become_user: postgres
+
+    - name: check that recovery mode is off
+      debug:
+        msg: "Recovery mode is {{ recovery_mode.stdout.strip() == 'f' | ternary('FALSE', 'TRUE') }}"
+      failed_when: recovery_mode.stdout.strip() != 'f'

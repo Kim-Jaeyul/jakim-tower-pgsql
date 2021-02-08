@@ -1,0 +1,9 @@
+---
+
+- name: Start Tower services
+  gather_facts: no
+  hosts: tower
+  tasks:
+    - include_role:
+        name: tower_service
+        tasks_from: start.yml

@@ -1,0 +1,13 @@
+#
+# Copyright 2018
+# author: 
+# description: this playbook is dedicated for Alliance Bank Malaysia 
+#
+- hosts: all
+  any_errors_fatal: false
+#  user: root
+#  become: true
+#  become_user: root
+  roles:
+    - pgsql-replication
+
