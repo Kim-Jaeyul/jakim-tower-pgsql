@@ -85,11 +85,11 @@
 
 2. Tower web console 상태확인
 
-   ![image-20210209064254259](C:\Users\jakim\Desktop\navercloud\pic\image-20210209064254259.png)
+   ![image-20210209064254259](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209064254259.png)
 
-   ![image-20210209064304227](C:\Users\jakim\Desktop\navercloud\pic\image-20210209064304227.png)
+   ![image-20210209064304227](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209064304227.png)
 
-   ![image-20210209064324606](C:\Users\jakim\Desktop\navercloud\pic\image-20210209064324606.png)
+   ![image-20210209064324606](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209064324606.png)
 
 3. DB2로 failover 수행
 
@@ -261,8 +261,8 @@
 
 6. Tower & DB2(primary) 연결확인
 
-   ![image-20210209070010608](C:\Users\jakim\Desktop\navercloud\pic\image-20210209070010608.png)
+   ![image-20210209070010608](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209070010608.png)
 
-   ![image-20210209070018217](C:\Users\jakim\Desktop\navercloud\pic\image-20210209070018217.png)
+   ![image-20210209070018217](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209070018217.png)
 
-   ![image-20210209070025145](C:\Users\jakim\Desktop\navercloud\pic\image-20210209070025145.png)
+   ![image-20210209070025145](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209070025145.png)
