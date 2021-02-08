@@ -372,10 +372,10 @@
 
 7. Tower 3개 모두 접속되는지 확인
 
-   ![image-20210209063516688](C:\Users\jakim\Desktop\navercloud\pic\image-20210209063516688.png)
+   ![image-20210209063516688](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209063516688.png)
 
-   ![image-20210209063532455](C:\Users\jakim\Desktop\navercloud\pic\image-20210209063532455.png)
+   ![image-20210209063532455](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209063532455.png)
 
-   ![image-20210209063541805](C:\Users\jakim\Desktop\navercloud\pic\image-20210209063541805.png)
+   ![image-20210209063541805](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209063541805.png)
 
    
