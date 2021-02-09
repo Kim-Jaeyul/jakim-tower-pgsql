@@ -1,0 +1,19 @@
+[RHEL8-Server-DVD-Appstream]
+name=Red Hat Enterprise Linux 8.3.0 (DVD) Appstream
+mediaid=None
+metadata_expire=-1
+gpgcheck=1
+cost=500
+baseurl=file:///mnt/disc/AppStream
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+
+[RHEL8-Server-DVD-BaseOS]
+name=Red Hat Enterprise Linux 8.3.0 (DVD) BaseOS
+mediaid=None
+metadata_expire=-1
+gpgcheck=1
+cost=500
+baseurl=file:///mnt/disc/BaseOS
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
