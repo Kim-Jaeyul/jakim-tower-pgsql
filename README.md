@@ -2,7 +2,7 @@
 
 ## 3 Tower & 2 pgsql 구성도
 
-![image-20210209084632817](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/pic/image-20210209084632817.png)
+![image-20210209084632817](C:\Users\jakim\Desktop\navercloud\pic\image-20210209084632817.png)
 
 
 
@@ -19,3 +19,10 @@
 9. [Ansible Tower 설치(host Bastion).md](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/09Ansible%20Tower%20%EC%84%A4%EC%B9%98(host%20%20Bastion).md)
 10. [DB2로 failover 시나리오.md](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/10DB2%EB%A1%9C%20failover%20%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4.md)
 11. [DB1으로 failback 시나리오.md](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/11DB1%EC%9C%BC%EB%A1%9C%20failback%20%EC%8B%9C%EB%82%98%EB%A6%AC%EC%98%A4.md)
+
+
+
+## Q&A
+
+1. [필요 방화벽.md](https://github.com/Kim-Jaeyul/jakim-tower-pgsql/blob/main/doc/Q01%ED%95%84%EC%9A%94%20%EB%B0%A9%ED%99%94%EB%B2%BD.md)
+
