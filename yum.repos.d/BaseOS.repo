@@ -1,0 +1,11 @@
+[RHEL8-Server-DVD-Appstream]
+name=Red Hat Enterprise Linux 8.3.0 (DVD) Appstream
+enabled=1
+gpgcheck=0
+baseurl=http://192.168.1.30:8080/cdrom/AppStream/
+
+[RHEL8-Server-DVD-BaseOS]
+name=Red Hat Enterprise Linux 8.3.0 (DVD) BaseOS
+enabled=1
+gpgcheck=0
+baseurl=http://192.168.1.30:8080/cdrom/BaseOS/
